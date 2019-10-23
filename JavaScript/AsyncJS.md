@@ -75,3 +75,37 @@ loadScript('/my/script.js', function(error, script) {
 ```
 
 Above is a function named loadScript (Script loading is an async task). When async task fails, we call the callback function with error message. Success and failure both cases are handled by the same callback function.
+
+First argument of callback function is always error and rest are for success.
+
+### Callback Hell / Pyramid of Doom
+
+Now say, we need to execute multiple functions one after another. For that we would have to use callback inside callback (Nested Callbacks). That sequence to nested callbacks are called **callback-hell** or pyramid of doom (Because it looks like a horizontal pyramid).
+
+ex...
+
+```js
+var message = "Not Updated";
+function asyncFun(msg ,callback) {
+    setTimeout(() => {
+        message = msg;
+        callback();
+    }, 0)
+}
+asyncFun("callback 1" ,() => {
+    console.log(message);
+    asyncFun("callback 2", () => {
+        console.log(message);
+        asyncFun("callback 3", () => {
+            console.log(message);
+            asyncFun("callback 4", () => {
+                console.log(message);
+            })
+        })
+    })
+});
+
+// Output: callback 1, callback 2, callback 3, callback 4
+```
+
+This looks pretty ugly, becomes confusing, is hard to manage, and surely it is not the best approach when got to execute multiple functions. That's where promises comes into play. Promises are an another approach for async JS.
