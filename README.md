@@ -11,3 +11,6 @@
   - Ch 4: Objects and Arrays
   - Ch 5: Higher Order Functions, Callbacks, String and Array methods
   - Ch 6: The secret life of objects, Classes, inheritance, prototype, OOP
+
+## Day 3
+  - Ch 11: Asynchronous JavaScript, Callbacks, Promises, The Event Loop
