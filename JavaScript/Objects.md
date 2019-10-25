@@ -1,4 +1,4 @@
-# Data Structure: Object, Arrays, OOP: Classes, inheritance, prototype
+# Data Structure: Object and Arrays, for...in loop, property accessors
 
 ## Objects
 
@@ -105,5 +105,14 @@ console.log(me.fullName); // Swastik Bittu
 ```
 
 Notice: We didn't call the function `fullName` ever. It was all handled by getter and setter. Of course this can be done without property accessors, you just have to manually call the function `fullName`.
+
+## Object Methods
+
+Most commonly used object methods:
+
+ - Object.create(): Creates a new object. If argument is `null` - creates object without prototype.
+ - Object.keys(): Returns an array of enumerable own keys.
+ - Object.values(): Returns an array of enumerable own values.
+ - Object.entries(): Returns an array of enumerable own key value pairs.
 
 ## THE END

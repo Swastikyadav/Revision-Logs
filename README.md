@@ -11,8 +11,8 @@
   - 4: Higher Order Functions, String and Array methods
 
 ## 3. Objects
-  - 5: Objects and Arrays
-  - 6: Object Oriented JavaScript, Classes, inheritance, prototype
+  - 5: [Objects and Arrays, for...in loop](./JavaScript/Objects.md)
+  - 6: [Object Oriented JavaScript, Classes, inheritance, prototype](./JavaScript/Oop.md)
 
 ## 4. Asynchronicity
   - 7: [Asynchronous JavaScript, Callbacks, Promises, Async/Await](./JavaScript/AsyncJS.md)
