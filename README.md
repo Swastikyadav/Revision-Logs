@@ -15,10 +15,12 @@
   - 6: Object Oriented JavaScript, Classes, inheritance, prototype
 
 ## 4. Asynchronicity
-  - 7: Asynchronous JavaScript, Callbacks, Promises, The Event Loop
+  - 7: [Asynchronous JavaScript, Callbacks, Promises, Async/Await](./JavaScript/AsyncJS.md)
 
-## 5. DOM
+## 5. Network Requests
+  - 8: Xhr Http request, fetch
 
-## 6. Network Requests
+## 6. ES 6+
+  - 9: Write JavaScript in bleeding edge technology.
 
 **ReactJS**

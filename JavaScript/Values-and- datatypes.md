@@ -1,2 +1,0 @@
-# Values, DataTypes and Operators
-
