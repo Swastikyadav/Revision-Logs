@@ -44,7 +44,7 @@ That was our own fetch function. Now let's work with build in fetch function.
 ## Fetch (Build in)
 
 ```js
-fetchData('https://api.github.com/users/swastikyadav')
+fetch('https://api.github.com/users/swastikyadav')
     .then(res => res.json())
     .then(data => console.log(data.followers));
 
