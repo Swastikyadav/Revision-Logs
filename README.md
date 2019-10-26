@@ -18,7 +18,7 @@
   - 7: [Asynchronous JavaScript, Callbacks, Promises, Async/Await](./JavaScript/AsyncJS.md)
 
 ## 5. Network Requests
-  - 8: Xhr Http request, fetch
+  - 8: [Xhr Http request, fetch](./JavaScript/Network-request.md)
 
 ## 6. ES 6+
   - 9: Write JavaScript in bleeding edge technology.

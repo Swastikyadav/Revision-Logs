@@ -160,4 +160,76 @@ We can directly write method inside class. Not need to manually put in prototype
 
 What's happening here is same as in 'prototypal way of creating object', but just with automation and a better syntax.
 
+To extend a class: `class Child extends Parent`:
+
+  - That means `Child.prototype.__proto__` will be `Parent.prototype`, so methods are inherited.
+
+When overriding a constructor:
+
+  - We must call parent constructor as `super()` in Child constructor before using `this`.
+
+When overriding another method:
+
+  - We can use super.method() in a Child method to call Parent method.
+
+```js
+class Human {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        console.log(`Human ${this.name} eats`);
+    }
+
+    sleep() {
+        console.log(`Human ${this.name} sleeps`);
+    }
+}
+
+// Extending Human class
+class Male extends Human {
+    constructor(name, gender = "male") {
+        super(name); // Super executes the constructor of parent (Human) class.
+        this.gender = gender;
+    }
+
+    sleep() {
+      super.sleep(); //
+      console.log(`Human ${this.name} sleeps at least 6 hours`);
+    }
+}
+
+const swastik = new Male("Swastik");
+swastik.sleep(); // Human Swastik sleeps, Human Swastik sleeps at least 6 hours
+```
+
+This is how we extends a class and override constructor and other methods in class.
+
+### Static properties and methods
+
+We can also assign methods to class function itself, not to its prototype. And such methods are called static methods. `this` inside such methods points to class itself.
+
+```js
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  static staticMethod() {
+    cosnole.log(this);
+  }
+
+  getThis() {
+    console.log(this);
+  }
+}
+
+const user1 = new User("Swastik");
+user1.staticMethod(); // Err, no such method exists. - Because staticMethod() is a method of class itself, not of its prototype.
+User.staticMethod(); // User fn()
+
+user1.getThis(); // user1 { name: "Swastik" }, getThis() is a method of prototype of class.
+``
+
 ## THE END
