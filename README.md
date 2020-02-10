@@ -21,5 +21,3 @@
 
 ## 6. ES 6+
   - 8: Write JavaScript in bleeding edge technology.
-
-**ReactJS**
